@@ -5,7 +5,9 @@ media = (n1+n2)/2
 
 print('A sua média foi {}'.format(media))
 
-if media >= 6:
-  print('Aprovado')
-else:
+if media < 5:
   print('Reprovado')
+elif media >= 5 and media < 7:
+  print('Recuperação')
+else:
+  print('Aprovado')
