@@ -8,7 +8,7 @@ l18= 0
 print('=-='*16)
 
 for i in range (1,8):
-  nasc = int(input('Insira seu ano de nascimento: '))
+  nasc = int(input('{}º pessoa, insira seu ano de nascimento: '.format(i)))
   aux.append(nasc)
 
 print('=-='*16)
@@ -16,10 +16,10 @@ print('=-='*16)
 for i in range (7):
   idade = presente - aux[i]
   if idade >= 18:
-    print('O ano de nascimento é {}. Logo, maior de idade!'.format(aux[i]))
+    print('O ano de nascimento da {}º pessoa é {}. Logo, maior de idade!'.format(i+1, aux[i]))
     m18 += 1
   elif idade < 18: 
-    print('O ano de nascimento é {}. Logo, menor de idade!'.format(aux[i])) 
+    print('O ano de nascimento da {}º pessoa é {}. Logo, menor de idade!'.format(i+1, aux[i])) 
     l18 += 1
 
 print('=-='*16)
