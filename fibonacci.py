@@ -1,8 +1,13 @@
-n = int(input('Insira um valor de elementos que deseja ver da sequência de Fibonacci: '))
-n2 = n + (n - 1)
-cont = 0
+a = 0
+b = 1
+aux = 0 
 
-while cont <= n:
-  print('{}'.format(n2))
-  cont += 1
+tam = int(input('Quantos valores deseja ver da sequência de Fibonacci? '))
 
+while aux < tam+1:
+  print('{} - '.format(a), end = '')
+  x = a
+  a = b
+  b = b + x
+  aux += 1
+print('FIM',end = '')
