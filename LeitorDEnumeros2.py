@@ -1,21 +1,22 @@
-n = 0.5
+n = 0
 cont = 0
 soma = 0
-maior = 0
-menor = 0
+aux = ''
+lista = []
 
-while n != 0:
+while aux != 'N':
   n = int(input('Insira um valor: '))
-  maior = n
-  menor = n
-  if maior > n:
-    maior = n
-  elif menor < n:
-    menor = n
   soma += n
   cont += 1
+  lista.append(n)
+  aux = str(input('Deseja continuar? [S/N] ')).upper()
+  if aux == 'N':
+    aux = 'N'
 
-print(soma)
-print('A média dos valores inseridos foi: {}'.format(soma/(cont-1)))
-print(maior)
-print(menor)
+print('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=')
+print('A soma de todos os valores resulta em: {}'.format(soma))
+print('Essa foi a quantidade de números inseridos: {}'.format(cont))
+print('A média dos valores inseridos foi: {}'.format(soma/(cont)))
+print('O maior valor inserido foi: {}'.format(max(lista)))
+print('O menor valor inserido foi: {}'.format(min(lista)))
+print('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=')
