@@ -1,5 +1,6 @@
 from random import randint
 aux = 1
+win = 0
 
 while aux != 0:
   pc = randint(0,10) 
@@ -14,6 +15,7 @@ while aux != 0:
     if soma % 2 == 0: 
       print(f'O computador jogou {pc}!')
       print('Deu par! Você venceu!!')
+      win += 1
     else: 
       print(f'O computador jogou {pc}!')
       print('Deu ímpar! Você perdeu.')
@@ -26,3 +28,6 @@ while aux != 0:
     else: 
       print(f'O computador jogou {pc}!')
       print('Deu ímpar! Você venceu!!')
+      win += 1
+
+print(f'Total de vitória(s): {win}')
