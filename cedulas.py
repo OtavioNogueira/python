@@ -2,16 +2,16 @@
 print('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=')
 valor = int(input('Insira o valor: '))
 
-ci = round(valor/50)
-ci2 = ci * 50
+ci = int(valor / 50)
+ci2 = valor % 50 
 
-vi = round((valor - ci2)/20)
-vi2 = vi * 20
+vi = int(ci2/20)
+vi2 = (ci2 % 20)
 
-de = round(valor - (ci2 + vi2)/10)
-de2 = de * 10
+de = int((vi2) / 10)
+de2 = (vi2 % 10)
 
-um = round(valor - (ci2 + vi2 + de2)/1)
+um = int(de2 / 1)
 
 print(f'Esse é o total de notas de R$50: {ci}')
 print(f'Esse é o total de notas de R$20: {vi}')
