@@ -1,0 +1,20 @@
+L = int(input(""))
+lesmas = []
+i = 0
+
+l = input("")
+valores = l.split()
+    
+valores_int = [int(valor) for valor in valores]
+lesmas.extend(valores_int) 
+
+maior = max(lesmas)
+
+if(maior < 10):
+    nivel = 1
+elif(maior >= 10 and maior < 20):
+    nivel = 2 
+elif(maior >= 20):
+    nivel = 3
+    
+print(nivel)
