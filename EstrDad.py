@@ -10,12 +10,25 @@ class DynamicIntArray:
         if self.size==0:
             return 1
         
-    def get(self, value):
-        print(self.data[value])
-        
-    def set(self, indc, value):
-        self.data[indc] = value
-        
+    def get(self, index):
+        if 0 <= index < len(self.data):
+            print(self.data[index])
+            
+    def set(self, index, value):
+        if 0 <= index < len(self.data):
+            self.data[index] = value
+
+    def contains(self, value):
+        return value in self.data
+    
+    def remove_at(self, index):
+        if 0 <= index < len(self.data):
+            del self.data[index]
+    
+    def remove(self, value):
+        if value in self.data:
+            self.data.remove(value)
+
     def append(self, value):
         if self.size == self.capacity:
             self._resize_up(2 * self.capacity)
@@ -63,6 +76,27 @@ print("--------------------------------")
 print(lista)
 print("Trocando elemento no índice 2 para 99.")  
 lista.set(2, 99)
+print(lista)
+
+print("--------------------------------")
+
+lista.append(0)
+print(lista)
+print("Verificando se 0 existe;")
+print("0 existe na lista? ", "Sim" if lista.contains(0) else "Não")
+
+print("--------------------------------")
+
+print(lista)
+lista.remove_at(3)
+print("Removendo elemento no indice 3 se existir.")
+print(lista)
+
+print("--------------------------------")
+
+print(lista)
+print("Removendo elemento 99 se existir.")
+lista.remove(99)
 print(lista)
 
 print("--------------------------------")
