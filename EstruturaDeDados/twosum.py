@@ -19,7 +19,7 @@ def partition(arr, left, right):
     pivot = arr[right]
     i = left - 1
     for j in range(left, right):
-        if arr[j][0] <= pivot[0]:  # Comparando pelo valor
+        if arr[j][0] <= pivot[0]:  
             i += 1
             arr[i], arr[j] = arr[j], arr[i]
     arr[i + 1], arr[right] = arr[right], arr[i + 1]
