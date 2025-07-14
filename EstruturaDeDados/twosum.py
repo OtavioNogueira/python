@@ -25,18 +25,18 @@ def partition(arr, left, right):
     arr[i + 1], arr[right] = arr[right], arr[i + 1]
     return i + 1
 
-def two_sum2(nums, target):
-    arr = [(nums[i], i) for i in range(len(nums))]
+def two_sum2(arr, alvo):
+    array = [(arr[i], i) for i in range(len(arr))]
 
-    quicksort(arr)
+    quicksort(array)
 
     i = 0
-    j = len(arr) - 1
+    j = len(array) - 1
     while i < j:
-        soma = arr[i][0] + arr[j][0]
-        if soma == target:
-            return [arr[i][1], arr[j][1]]
-        elif soma < target:
+        soma = array[i][0] + array[j][0]
+        if soma == alvo:
+            return [array[i][1], array[j][1]]
+        elif soma < alvo:
             i += 1
         else:
             j -= 1
